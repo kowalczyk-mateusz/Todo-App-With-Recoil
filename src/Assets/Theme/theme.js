@@ -8,15 +8,23 @@ export default {
       text: '#000',
       background: '#fff',
       primary: '#33e',
+      button: '#033',
     },
-    styles: {
-      h1: {
-        fontSize: 32,
+    buttons: {
+      primary: {
+        color: '#fff',
+        bg: '#033',
+        '&:hover': {
+          bg: '#031',
+        }
+      }
+    },
+      heading: {
+        fontSize: 40,
         fontFamily: 'heading',
         fontWeight: 'heading',
-        color: 'primary',
-        mt: 4,
+        color: '#fff',
+        mt: 0,
         mb: 2,
       },
-    }
   }

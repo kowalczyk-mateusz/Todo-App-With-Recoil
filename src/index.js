@@ -5,11 +5,20 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from 'theme-ui'
 import theme from './Assets/Theme/theme'
 import GlobalStyles from './Assets/Styles/GlobalStyles'
+import {
+  RecoilRoot,
+  atom,
+  selector,
+  useRecoilState,
+  useRecoilValue,
+} from 'recoil';
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
         <GlobalStyles />
+        <RecoilRoot>
         <App />
+        </RecoilRoot>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
