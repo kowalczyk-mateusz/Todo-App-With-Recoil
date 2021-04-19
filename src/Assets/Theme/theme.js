@@ -17,6 +17,6 @@ export default {
         color: 'primary',
         mt: 4,
         mb: 2,
-      }
+      },
     }
   }

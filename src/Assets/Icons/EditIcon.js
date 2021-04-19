@@ -4,7 +4,8 @@ const EditIcon = () =>{
     return(
         <div sx={{
             width: '2.5rem',
-            height: '2.5rem'
+			height: '2.5rem',
+			margin: '0 0.15rem',
         }}>
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 300 300" xmlSpace="preserve">

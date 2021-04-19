@@ -1,10 +1,18 @@
 /** @jsxImportSource theme-ui */
-import SingleTodo from './Components/SingleTodo/SingleTodo'
+import TodoContainer from './Components/TodoContainer'
+import {Box} from 'theme-ui'
+import AddTodo from './Components/AddTodo'
 function App() {
   return (
-    <div>
-      <SingleTodo />
-    </div>
+    <Box sx={{
+      margin: 0,
+      padding: 0,
+      width: '100%',
+      minHeight: '100vh',
+    }}>
+      <AddTodo />
+      <TodoContainer />
+    </Box>
   );
 }
 
