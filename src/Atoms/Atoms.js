@@ -17,6 +17,11 @@ import {
       default: 'Show All'
   })
 
+  export const searchTodos = atom({
+      key: 'searchTodos',
+      default: [],
+  })
+
   export const filteredTodos = selector({
       key: 'filteredTodos',
       get: ({get})=> {
@@ -51,4 +56,3 @@ import {
         }
   })
 
-  

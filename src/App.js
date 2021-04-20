@@ -1,6 +1,8 @@
 import React from 'react';
 import MainPage from './Components/MainPage/MainPage'
+import SearchPage from './Components/SearchPage/SearchPage'
 import {Route} from 'react-router-dom'
+
 function App() {
 
 
@@ -10,6 +12,7 @@ function App() {
            <Route path={['/todo/:id', '/']}>
           <MainPage/>
           </Route>
+          <SearchPage />
   </>
   );
 }
