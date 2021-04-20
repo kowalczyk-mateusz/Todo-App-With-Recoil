@@ -1,6 +1,6 @@
 /** @jsxImportSource theme-ui */
 
-const DoneIcon = () =>{
+const DoneIcon = ({completed}) =>{
     return(
         <div sx={{
             width: '2.5rem',
@@ -9,7 +9,7 @@ const DoneIcon = () =>{
         }}>
 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 50 50"  xmlSpace="preserve">
-<circle sx={{fill:'#25AE88'}} cx="25" cy="25" r="25"/>
+<circle sx={{fill:'#25AE88', opacity: completed ? '1' : '0.3'}} cx="25" cy="25" r="25"/>
 <polyline sx={{fill:'none',stroke:'#FFFFFF', strokeWidth:2, strokeLinecap: 'round',strokeLinejoin:'round',strokeMiterlimit:10}} points="
 	38,15 22,33 12,25 "/>
 <g>

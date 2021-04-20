@@ -31,7 +31,7 @@ const TodoContainer = () => {
     return (
         <Box>
             {!isLoading &&(
-            todoList.map((el)=><SingleTodo key={el.id} data={el}/>))}
+            todoList.map((el)=><SingleTodo key={el.title} data={el}/>))}
         </Box>
     );
 }
