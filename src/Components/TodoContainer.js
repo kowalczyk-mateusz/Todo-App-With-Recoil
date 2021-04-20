@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SingleTodo from './SingleTodo/SingleTodo'
 import {Box} from 'theme-ui'
-import {FetchTodos} from '../Atoms/Atoms'
+import {FetchTodos, filteredTodos} from '../Atoms/Atoms'
 import {
     RecoilRoot,
     atom,
@@ -13,6 +13,7 @@ import {
 const TodoContainer = () => {
 
     const [allTodos, setAllTodos] = useRecoilState(FetchTodos)
+    const todoList = useRecoilValue(filteredTodos)
     const [isLoading, setIsLoading] = useState(false)
     useEffect(()=>{
         const getTodos = async () => {
@@ -26,11 +27,11 @@ const TodoContainer = () => {
         setIsLoading(false)
     }, [])
 
-    console.log(allTodos)
+
     return (
         <Box>
             {!isLoading &&(
-            allTodos.map((el)=><SingleTodo data={el}/>))}
+            todoList.map((el)=><SingleTodo key={el.id} data={el}/>))}
         </Box>
     );
 }

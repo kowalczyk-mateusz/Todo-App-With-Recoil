@@ -3,6 +3,7 @@ import React from 'react';
 import EditTodo from './EditTodo'
 import {Text, Flex, Box} from 'theme-ui'
 const SingleTodo = ({data: {title, id, created_at, completed}}) => {
+  console.log(completed)
     return (
       <Box p={3} sx={{border: '1px solid black', maxWidth: '1000px', margin: '1rem auto', borderRadius: '1rem'}}>
       <Flex sx={{alignItems: 'center', justifyContent: 'space-between'}}>
@@ -10,7 +11,7 @@ const SingleTodo = ({data: {title, id, created_at, completed}}) => {
       }}>
             {title}
         </Text>
-        <EditTodo />
+        <EditTodo id={id}/>
       </Flex>
       </Box>
     );
