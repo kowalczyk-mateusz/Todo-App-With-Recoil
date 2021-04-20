@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import SingleTodo from './SingleTodo/SingleTodo'
 import {Box} from 'theme-ui'
-import {FetchTodos, filteredTodos} from '../Atoms/Atoms'
+import {FetchTodos, filteredTodos} from '../../Atoms/Atoms'
 import {
     RecoilRoot,
     atom,

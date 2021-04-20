@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from 'theme-ui'
 import theme from './Assets/Theme/theme'
 import GlobalStyles from './Assets/Styles/GlobalStyles'
+import {BrowserRouter} from 'react-router-dom'
 import {
   RecoilRoot,
   atom,
@@ -15,9 +16,11 @@ import {
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-        <GlobalStyles />
+      <GlobalStyles />
         <RecoilRoot>
-        <App />
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
         </RecoilRoot>
     </ThemeProvider>
   </React.StrictMode>,

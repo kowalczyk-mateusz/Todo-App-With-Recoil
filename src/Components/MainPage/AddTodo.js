@@ -1,7 +1,7 @@
 /** @jsxImportSource theme-ui */
 import React, {useState} from 'react';
 import {Heading, Box, Input, Button, Flex} from 'theme-ui';
-import {FetchTodos, filteredTodos} from '../Atoms/Atoms'
+import {FetchTodos, filteredTodos} from '../../Atoms/Atoms'
 import {useRecoilState} from 'recoil'
 const AddTodo = () => {
 
