@@ -2,7 +2,9 @@
 import TodoContainer from './Components/TodoContainer'
 import {Box} from 'theme-ui'
 import AddTodo from './Components/AddTodo'
+
 function App() {
+
   return (
     <Box sx={{
       margin: 0,
@@ -12,6 +14,7 @@ function App() {
     }}>
       <AddTodo />
       <TodoContainer />
+
     </Box>
   );
 }
