@@ -2,6 +2,7 @@ import React from 'react';
 import MainPage from './Components/MainPage/MainPage'
 import SearchPage from './Components/SearchPage/SearchPage'
 import {Route} from 'react-router-dom'
+import Navigation from './Components/Navigation/Navigation'
 
 function App() {
 
@@ -9,10 +10,13 @@ function App() {
   return (
   
   <>
-           <Route path={['/todo/:id', '/']}>
+  <Navigation />
+           <Route path={['/todo/:id', '/']} exact>
           <MainPage/>
           </Route>
+          <Route path={['/todo/:id,', '/search']}>
           <SearchPage />
+          </Route>
   </>
   );
 }

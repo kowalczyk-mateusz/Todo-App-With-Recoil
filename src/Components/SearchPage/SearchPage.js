@@ -1,5 +1,8 @@
 import React from 'react';
 import {FetchTodos, searchTodos} from '../../Atoms/Atoms'
+import {Box, Input, Label, Text, Card} from 'theme-ui'
+import SearchTodos from './SearchTodos'
+import SearchedTodos from './SearchedTodos'
 import {
     RecoilRoot,
     atom,
@@ -14,15 +17,15 @@ const SearchPage = () => {
     const searchedTodoList = useRecoilValue(searchTodos)
 
     const searchTodosHandler = ({target: {value}}) =>{
-        const data = allTodos.filter((el)=> el.title === value)
-        console.log(data)
+        const data = allTodos.filter((el)=> el.title.includes(value))
+        setSearchTodosList(data)
         
     }
     return (
-        <div>
-            <label>wyszukaj cos se tak o </label>
-            <input onChange={searchTodosHandler}/>
-        </div>
+            <>
+                <SearchTodos />
+                <SearchedTodos />
+            </>
     );
 }
 
