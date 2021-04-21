@@ -1,10 +1,4 @@
-import {
-    RecoilRoot,
-    atom,
-    selector,
-    useRecoilState,
-    useRecoilValue,
-  } from 'recoil';
+import {atom,selector} from 'recoil';
 
 
   export const FetchTodos = atom({
@@ -39,6 +33,8 @@ import {
             }
       }
   })
+
+
 
   export const todoCounter = selector({
       key: 'todoCounter',

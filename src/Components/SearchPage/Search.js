@@ -1,18 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {FetchTodos, searchTodos} from '../../Atoms/Atoms'
-import {Heading, Box, Input, Button, Flex} from 'theme-ui';
-import {
-    RecoilRoot,
-    atom,
-    selector,
-    useRecoilState,
-    useRecoilValue,
-  } from 'recoil';
-const SearchTodos = () => {
+import {Heading, Box, Input, Flex} from 'theme-ui';
+import {useRecoilState,useRecoilValue} from 'recoil';
+const Search = () => {
     
     const allTodos = useRecoilValue(FetchTodos)
     const [searchTodosList, setSearchTodosList] = useRecoilState(searchTodos)
 
+
+    useEffect(()=>{
+            setSearchTodosList(allTodos)
+    }, [allTodos])
     const searchTodosHandler = ({target: {value}}) =>{
         const data = allTodos.filter((el)=> el.title.includes(value))
         setSearchTodosList(data)
@@ -30,4 +28,4 @@ const SearchTodos = () => {
     );
 }
 
-export default SearchTodos;
+export default Search;

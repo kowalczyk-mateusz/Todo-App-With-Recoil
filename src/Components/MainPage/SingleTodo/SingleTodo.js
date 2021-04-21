@@ -2,7 +2,7 @@
 import React from 'react';
 import EditTodo from './EditTodo'
 import {Text, Flex, Box} from 'theme-ui'
-const SingleTodo = ({data: {title, id, created_at, completed}, data}) => {
+const SingleTodo = ({data: {title, id, completed}, data}) => {
 
 
     return (

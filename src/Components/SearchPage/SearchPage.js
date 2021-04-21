@@ -1,30 +1,25 @@
 import React from 'react';
-import {FetchTodos, searchTodos} from '../../Atoms/Atoms'
-import {Box, Input, Label, Text, Card} from 'theme-ui'
-import SearchTodos from './SearchTodos'
+import {Box} from 'theme-ui'
+import Search from './Search'
 import SearchedTodos from './SearchedTodos'
-import {
-    RecoilRoot,
-    atom,
-    selector,
-    useRecoilState,
-    useRecoilValue,
-  } from 'recoil';
+import FilterTodos from '../MainPage/FilterTodos'
+import {useParams, useLocation} from 'react-router-dom'
+import SearchedCard from './SearchedCard'
+import EditTodo from '../MainPage/SingleTodo/EditTodo'
 const SearchPage = () => {
-    
-    const [allTodos, setAllTodos] = useRecoilState(FetchTodos)
-    const [searchTodosList, setSearchTodosList] = useRecoilState(searchTodos)
-    const searchedTodoList = useRecoilValue(searchTodos)
+    const location = useLocation()
+    const id = location.pathname.split('/')[2]
+    console.log(id)
+    console.log(location)
+    console.log(id)
 
-    const searchTodosHandler = ({target: {value}}) =>{
-        const data = allTodos.filter((el)=> el.title.includes(value))
-        setSearchTodosList(data)
-        
-    }
     return (
-            <>
-                <SearchTodos />
+        <>
+            <Box>
+                <Search />
                 <SearchedTodos />
+            </Box>
+            {id && (<SearchedCard />)}
             </>
     );
 }

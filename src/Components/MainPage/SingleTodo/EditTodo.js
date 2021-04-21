@@ -4,18 +4,14 @@ import EditIcon from '../../../Assets/Icons/EditIcon'
 import DeleteIcon from '../../../Assets/Icons/DeleteIcon'
 import DoneIcon from '../../../Assets/Icons/DoneIcon'
 import {Flex, Box} from 'theme-ui'
-import {Link} from 'react-router-dom'
-import {
-    RecoilRoot,
-    atom,
-    selector,
-    useRecoilState,
-    useRecoilValue,
-  } from 'recoil';
-  import {FetchTodos} from '../../../Atoms/Atoms'
-const EditTodo = ({id, data}) => {
+import {Link, useLocation} from 'react-router-dom'
+import {useRecoilState} from 'recoil';
+import {FetchTodos, searchTodos} from '../../../Atoms/Atoms'
+const EditTodo = ({data}) => {
+    const location = useLocation()
 
     const [allTodos, setAllTodos] = useRecoilState(FetchTodos)
+    const [searchTodosList, setSearchTodosList] = useRecoilState(searchTodos)
     const index = allTodos.findIndex((item)=> item === data)
 
     //CHANGE COMPLETE/UNCOMPLETE
@@ -25,17 +21,18 @@ const EditTodo = ({id, data}) => {
             completed: !data.completed, 
         })
         setAllTodos(newTodos)
+        setSearchTodosList(newTodos)
     }
 
     //DELETE TODO
     const deleteTodo =() =>{
         const newTodos = deleteItemWithId(allTodos, index)
-
+        setSearchTodosList(newTodos)
         setAllTodos(newTodos)
     }
     return (
         <Flex sx={{minWidth: '9rem'}}>
-            <Link to={`/todo/${index}`}>
+            <Link to={location.pathname === '/' ? `/todo/${index}` : `/search/${index}`}>
             <EditIcon />
             </Link>
             <Box onClick={changeStatus} sx={{cursor: 'pointer'}}>
