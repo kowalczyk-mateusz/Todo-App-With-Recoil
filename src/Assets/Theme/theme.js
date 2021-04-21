@@ -15,11 +15,12 @@ export default {
         color: '#fff',
         bg: '#033',
         '&:hover': {
-          bg: '#031',
+          bg: '#041',
         }
       }
     },
-      heading: {
+
+    heading: {
         fontSize: 40,
         fontFamily: 'heading',
         fontWeight: 'heading',

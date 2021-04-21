@@ -12,19 +12,19 @@ const FilterTodos = () => {
        }
 
     return (
-        <Flex>
-        <Flex sx={{justifyContent: 'center'}}>
-          <Text>Filter: </Text>
-        <Select value={filter} onChange={filterTodos} sx={{width: '10rem'}}>
+        <Flex p={2} sx={{justifyContent: 'center', flexWrap: 'wrap', alignItems: 'center'}}>
+        <Flex sx={{justifyContent: 'center', height: '2rem'}}>
+          <Text pr={2} sx={{lineHeight: '2rem%', fontSize: '1.3rem'}}>Filter: </Text>
+        <Select value={filter} onChange={filterTodos} sx={{width: '10rem', height: '2rem'}}>
                 <option value='Show All'>All</option>
                 <option value='Show Completed'>Completed</option>
                 <option value='Show Uncompleted'>Uncompleted</option>
               </Select>
         </Flex>
-        <Box>
-        <Text>All Todos: {todosLength}</Text>
-        <Text>Completed Todos: {completedLength}</Text>
-        <Text>Uncompleted Todos: {uncompletedLength}</Text>
+        <Box m={2}sx={{lineHeight: '2rem%', fontSize: '1.3rem'}}>
+        <Text pl={2} pr={2}>All Todos: {todosLength}</Text>
+        <Text pl={2} pr={2}>Completed Todos: {completedLength}</Text>
+        <Text pl={2} pr={2}>Uncompleted Todos: {uncompletedLength}</Text>
         </Box>
         </Flex>
     );

@@ -25,11 +25,11 @@ const AddTodo = () => {
     }
     
     return (
-        <Box bg="primary" p={3} sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%',}}>
+        <Box bg="primary" p={5} sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '100%',}}>
             <Heading as='h1'>TODO APP</Heading>
             <Flex sx={{justifyContent: 'center', flexWrap: 'wrap', maxWidth: '900px', width: '100%',}}>
                 <Input sx={{padding: '1rem 3rem'}} sx={{maxWidth: '600px', width: '100%',}} onChange={todoHandler} value={todo || ''}/>
-                <Button sx={{padding: '1rem 3rem'}} variant='primary' onClick={addNewTodo}>Add Todo</Button>
+                <Button ml={3} sx={{padding: '1rem 3rem', cursor: 'pointer'}} variant='primary' onClick={addNewTodo}>Add Todo</Button>
             </Flex>
         </Box>
     );
