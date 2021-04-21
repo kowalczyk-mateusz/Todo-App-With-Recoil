@@ -7,13 +7,13 @@ import Navigation from './Components/Navigation/Navigation'
 function App() {
   return (
       <>
-            <Navigation />
-            <Route path={['/todo/:id', '/']} exact>
-              <MainPage/>
-            </Route>
-            <Route path={['/search/:id,', '/search']}>
-              <SearchPage />
-            </Route>
+        <Navigation />
+        <Route path={['/todo/:id', '/']} exact>
+          <MainPage/>
+        </Route>
+        <Route path={['/search/:id,', '/search']}>
+          <SearchPage />
+        </Route>
       </>
   );
 }

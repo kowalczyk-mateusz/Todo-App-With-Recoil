@@ -1,4 +1,3 @@
-/** @jsxImportSource theme-ui */
 import TodoContainer from './TodoContainer'
 import {Box} from 'theme-ui'
 import AddTodo from './AddTodo'

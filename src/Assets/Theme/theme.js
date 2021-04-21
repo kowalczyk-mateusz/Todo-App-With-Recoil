@@ -19,7 +19,6 @@ export default {
         }
       }
     },
-
     heading: {
         fontSize: 40,
         fontFamily: 'heading',

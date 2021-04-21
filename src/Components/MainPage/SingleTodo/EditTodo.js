@@ -33,13 +33,13 @@ const EditTodo = ({data}) => {
     return (
         <Flex sx={{minWidth: '9rem'}}>
             <Link to={location.pathname === '/' ? `/todo/${index}` : `/search/${index}`}>
-            <EditIcon />
+                <EditIcon />
             </Link>
             <Box onClick={changeStatus} sx={{cursor: 'pointer'}}>
-            <DoneIcon completed={data.completed}/>
+                <DoneIcon completed={data.completed}/>
             </Box>
             <Box onClick={deleteTodo} sx={{cursor: 'pointer'}}>
-            <DeleteIcon/>
+                <DeleteIcon/>
             </Box>
         </Flex>
     );
