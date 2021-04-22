@@ -13,8 +13,9 @@ const AddTodo = () => {
         setTodo(value)
     }
     const addNewTodo = () => {
+        const randomId = Math.floor(Math.random() * 999)
         if(todo){
-            const id = allTodos[allTodos.length - 1]['id'] + 1 | 0
+            const id = allTodos.id ? allTodos[allTodos.length]['id'] + 1 | 0 : randomId;
             setAllTodos((todoList) => [
                 ...todoList,
                 {
