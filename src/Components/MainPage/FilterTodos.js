@@ -22,11 +22,11 @@ const FilterTodos = () => {
               <option value='Show Uncompleted'>Uncompleted</option>
             </Select>
           </Flex>
-          <Box m={2}sx={{lineHeight: '2rem%', fontSize: '1.3rem'}}>
+          <Flex m={2}sx={{lineHeight: '2rem', fontSize: '1.3rem', flexWrap: 'wrap', justifyContent: 'center'}}>
             <Text px={2}>All Todos: {todosLength}</Text>
             <Text px={2}>Completed Todos: {completedLength}</Text>
             <Text px={2}>Uncompleted Todos: {uncompletedLength}</Text>
-          </Box>
+          </Flex>
         </Flex>
     );
 }

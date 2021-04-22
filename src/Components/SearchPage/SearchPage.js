@@ -5,11 +5,9 @@ import SearchedTodos from './SearchedTodos'
 import { useLocation} from 'react-router-dom'
 import SearchedCard from './SearchedCard'
 const SearchPage = () => {
+    
     const location = useLocation()
     const id = location.pathname.split('/')[2]
-    console.log(id)
-    console.log(location)
-    console.log(id)
 
     return (
         <>
