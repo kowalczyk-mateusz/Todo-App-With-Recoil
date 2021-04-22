@@ -4,7 +4,7 @@ todo app with CRUD
 
 ## LIVE
 
-link
+https://todoapp-recoil.netlify.app/
 
 ### STACK
 
